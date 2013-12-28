@@ -10,5 +10,6 @@ slic3r \
 	 --print-center 150,150 \
 	 --support-material \
 	 --support-material-pattern rectilinear \
-	 --support-material-spacing 15 \
+	 --support-material-spacing 40 \
+	 --support-material-interface-layers 0 \
 	 -o rectangle.gcode rectangle.stl
