@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# probably only useful for me, sorry
+export PATH=/usr/bin:/usr/bin/core_perl:/usr/bin/vendor_perl
+
+# always execute in THIS dir
+self=$(readlink -e "$0") || exit 1
+self=$(dirname "${self}") || exit 1
+cd "$self"
+
 openscad -o sudo.stl sudo.scad
 
 slic3r \
