@@ -12,7 +12,10 @@ slic3r \
 	 --print-center 150,150 \
 	 --support-material \
 	 --support-material-pattern rectilinear \
-	 --support-material-spacing 40 \
-	 --support-material-interface-layers 0 \
-	 --skirts 2 \
+	 --support-material-spacing 80 \
+	 --support-material-interface-layers 1 \
+	 --skirts 3 \
 	 -o rectangle.gcode rectangle.stl
+
+sed -i 's/M104 S200/M104 S220/' rectangle.gcode
+sed -i 's/M109 S200/M109 S220/' rectangle.gcode

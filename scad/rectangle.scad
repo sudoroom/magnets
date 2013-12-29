@@ -1,10 +1,4 @@
-
-module test()
-{
-	difference() {
-		cylinder(2.5,8,8);
-		translate([0,0,0.5])cylinder(3,6.5,6.5);
-	}
+difference() {
+	translate([-15,-15,-5]) cube([30,30,5]);
+	translate([0,0,-3]) cylinder(4,6.5,6.5);
 }
-
-test();
