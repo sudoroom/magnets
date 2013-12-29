@@ -14,4 +14,5 @@ slic3r \
 	 --support-material-pattern rectilinear \
 	 --support-material-spacing 40 \
 	 --support-material-interface-layers 0 \
+	 --skirts 2 \
 	 -o rectangle.gcode rectangle.stl
