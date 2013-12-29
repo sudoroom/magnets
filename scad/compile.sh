@@ -4,16 +4,12 @@ openscad -o rectangle.stl rectangle.scad
 
 slic3r \
 	 --layer-height 0.25 \
-	 --perimeters 1 \
+	 --perimeters 2 \
 	 --top-solid-layers 2 \
 	 --nozzle-diameter 0.35 \
 	 --filament-diameter 1.75 \
 	 --temperature 220 \
-	 --print-center 150,150 \
-	 --support-material \
-	 --support-material-pattern rectilinear \
-	 --support-material-spacing 80 \
-	 --support-material-interface-layers 1 \
+	 --print-center 170,150 \
 	 --skirts 3 \
 	 -o rectangle.gcode rectangle.stl
 
