@@ -17,8 +17,8 @@ slic3r \
 	 --nozzle-diameter 0.35 \
 	 --filament-diameter 1.75 \
 	 --temperature 220 \
-	 --print-center 160,50 \
-	 --skirts 3 \
+	 --print-center 180,50 \
+	 --skirts 1 \
 	 -o sudo.gcode sudo.stl
 
 sed -i 's/M104 S200/M104 S220/' sudo.gcode
