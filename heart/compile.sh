@@ -8,7 +8,7 @@ self=$(readlink -e "$0") || exit 1
 self=$(dirname "${self}") || exit 1
 cd "$self"
 
-name=mini
+name=heart
 
 openscad -o ${name}.stl ${name}.scad
 
