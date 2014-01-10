@@ -1,13 +1,13 @@
 difference() {
-	translate([-12,-12,0]) minkowski() {
+	translate([-10,-10,0]) minkowski() {
 		linear_extrude(height=4) union() {
-			square(24,24);
-			translate([24,12,0]) scale([1.9,1]) circle(12);
-			translate([12,24,0]) scale([1,1.9]) circle(12);
+			square(20,20);
+			translate([20,10,0]) scale([1.9,1]) circle(10);
+			translate([10,20,0]) scale([1,1.9]) circle(10);
 		}
 		difference() {
-			sphere(r=6,$fn=20);
-			translate([-6,-6,-12]) cube([-12,-12,-12]);
+			sphere(r=5,$fn=15);
+			translate([-5,-5,-10]) cube([10,10,10]);
 		}
 	}
 	translate([0,0,0.5])    cylinder(2,6.75,6.75);
