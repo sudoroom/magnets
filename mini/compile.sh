@@ -24,7 +24,7 @@ slic3r \
 	 --fill-density 0.4 \
 	 --support-material \
 	 --support-material-pattern rectilinear \
-	 --support-material-spacing 2.5 \
+	 --support-material-spacing 3 \
 	 -o ${name}.gcode ${name}.stl
 
 sed -i 's/M104 S200/M104 S220/' ${name}.gcode
