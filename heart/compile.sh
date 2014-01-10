@@ -9,6 +9,7 @@ self=$(dirname "${self}") || exit 1
 cd "$self"
 
 name=heart
+tmpfile=/tmp/.magnet.$EUID.$$.$(date +%s).$RANDOM
 
 openscad -o ${name}.stl ${name}.scad
 
@@ -22,7 +23,12 @@ slic3r \
 	 --print-center 180,50 \
 	 --skirts 3 \
 	 --fill-density 0.4 \
-	 -o ${name}.gcode ${name}.stl
+	 -o ${tmpfile} ${name}.stl
 
-sed -i 's/M104 S200/M104 S220/' ${name}.gcode
-sed -i 's/M109 S200/M109 S220/' ${name}.gcode
+sed -i 's/M104 S200/M104 S220/' ${tmpfile}
+sed -i 's/M109 S200/M109 S220/' ${tmpfile}
+
+awk '/^G1 Z2.85/ {print "G1 Z6\nM226"}
+	{print}' ${tmpfile} >| ${name}.gcode
+
+rm -f ${tmpfile}
