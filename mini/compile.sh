@@ -14,7 +14,7 @@ openscad -o ${name}.stl ${name}.scad
 
 slic3r \
 	 --layer-height 0.25 \
-	 --perimeters 2 \
+	 --perimeters 1 \
 	 --solid-layers 3 \
 	 --nozzle-diameter 0.35 \
 	 --filament-diameter 1.75 \
@@ -22,9 +22,6 @@ slic3r \
 	 --print-center 180,50 \
 	 --skirts 3 \
 	 --fill-density 0.4 \
-	 --support-material \
-	 --support-material-pattern rectilinear \
-	 --support-material-spacing 3 \
 	 -o ${name}.gcode ${name}.stl
 
 sed -i 's/M104 S200/M104 S220/' ${name}.gcode
