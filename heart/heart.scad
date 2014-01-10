@@ -10,7 +10,7 @@ difference() {
 			translate([-6,-6,-12]) cube([-12,-12,-12]);
 		}
 	}
-	translate([0,0,0.25])    cylinder(1.75,6.75,6.75);
-	translate([0,0,-0.1])  cylinder(0.2,0.5,0.5);
+	translate([0,0,0.5])    cylinder(2,6.75,6.75);
+	translate([0,0,-0.1])  cylinder(2,0.5,0.5);
 	translate([-50,-50,-50]) cube([100,100,50]);
 }
