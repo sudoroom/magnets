@@ -6,7 +6,7 @@ difference() {
 			translate([12,24,0]) scale([1,1.9]) circle(12);
 		}
 		difference() {
-			sphere(r=6,$fn=15);
+			sphere(r=6,$fn=20);
 			translate([-6,-6,-12]) cube([-12,-12,-12]);
 		}
 	}
