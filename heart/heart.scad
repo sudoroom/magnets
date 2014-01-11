@@ -1,6 +1,6 @@
 difference() {
 	translate([-10,-10,0]) minkowski() {
-		linear_extrude(height=4) union() {
+		linear_extrude(height=0.1) union() {
 			square(20,20);
 			translate([20,10,0]) scale([1.9,1]) circle(10);
 			translate([10,20,0]) scale([1,1.9]) circle(10);
