@@ -8,7 +8,7 @@ self=$(readlink -e "$0") || exit 1
 self=$(dirname "${self}") || exit 1
 cd "$self"
 
-name=heart
+name=world
 tmpfile=/tmp/.magnet.$EUID.$$.$(date +%s).$RANDOM
 
 openscad -o ${name}.stl ${name}.scad
