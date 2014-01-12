@@ -21,7 +21,7 @@ slic3r \
 	 --nozzle-diameter 0.35 \
 	 --filament-diameter 1.75 \
 	 --temperature 220 \
-	 --print-center 70,50 \
+	 --print-center 70,70 \
 	 --skirts 2 \
 	 --fill-density 0.13 \
 	 -o ${tmpfile} ${name}.stl
