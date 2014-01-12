@@ -13,7 +13,7 @@ difference() {
 			translate([-15,-19,0])
 				scale([0.33,0.45,1])
 				linear_extrude(height=10)
-				import("hack_the_planet.dxf");
+				import("mesh_the_planet.dxf");
 		}
 	}
 	translate([0,0,0.3])     cylinder(1.75,6.5,6.5);
