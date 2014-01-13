@@ -21,9 +21,9 @@ slic3r \
 	 --nozzle-diameter 0.35 \
 	 --filament-diameter 1.75 \
 	 --temperature 220 \
-	 --print-center 70,70 \
+	 --print-center 215,80 \
 	 --skirts 2 \
-	 --fill-density 0.13 \
+	 --fill-density 0.12 \
 	 -o ${tmpfile} ${name}.stl
 
 sed -i 's/M104 S200/M104 S220/' ${tmpfile}
