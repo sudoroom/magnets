@@ -2,6 +2,10 @@
 
 These are experiments in 3D-printing fridge magnets for our hackerspace!
 
-They're supposed to have a hole just big enough to snap in a small disc magnet, but we don't have this sized perfectly yet so sometimes it needs glue. Sometimes they still fall out. So far we've used these magnets: http://www.amazon.com/gp/product/B0012ATDD2/ [is there a non-amazon link for this?]
+They are works in progress. Almost every step of making them is documented in 
+the "compile.sh" shell scripts. These scripts have our exact slic3r settings, 
+and sed commands which edit the gcode.
 
-These were modelled with Google Sketchup, sometimes in very stupid ways. We should redo them in openscad...
+The models contain a hole where the magnet goes. You insert it by hand while it's printing. A pause is inserted into the gcode to give you time. It also moves the bed, which hopefully will make a loud distinctive noise to alert you!
+
+We use these magnets: http://www.amazon.com/gp/product/B0012ATDD2/ [is there a non-amazon link for this?]
