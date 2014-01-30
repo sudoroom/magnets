@@ -1,4 +1,4 @@
-scale([0.8,1,1]) union() {
+scale([0.6,1,1]) union() {
 translate([0,0,1.25]) difference() {
 	rotate([90,0,0]) cylinder(30,15,15,$fn=200);
 	rotate([90,0,0]) translate([0,0,0.25])
