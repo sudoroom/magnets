@@ -40,32 +40,8 @@ module du(thick, gap) {
 	}
 }
 
-// transform along with the whole DU
-module du_tf() {
-	translate([10,-25,0]) child();
-}
-
-// transform along with the SE text area
-module caption() {
-	du_tf() translate([1,-20,0])
-		scale([0.2,0.2,1])
-		rotate([0,0,28])
-		child();
-}
-
 difference() {
-	union() {
-		du_tf() du(thick=9, gap=1);
-
-		// "double union" text
-		caption() intersection() {
-			linear_extrude(height=5)
-				import("text.dxf");
-			translate([50,19,0])
-				scale([8,3,0.35])
-				sphere(r=10,$fn=40);
-		}
-	}
+	translate([10,-25,0]) du(thick=9, gap=1);
 
 	// magnet hole
 	translate([0,0,0.3])  cylinder(1.75,6.5,6.5);
