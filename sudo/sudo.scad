@@ -4,8 +4,8 @@ difference() {
 		linear_extrude(height=0.1)
 			import("shrunk.dxf");
 		difference() {
-			sphere(r=3,$fn=13);
-			translate([-1,-1,-2]) cube([2,2,2]);
+			sphere(r=1.5,$fn=13);
+			translate([-3,-3,-6]) cube([6,6,6]);
 		}
 	}
 	translate([0,0,0.3])  cylinder(1.75,6.5,6.5);
