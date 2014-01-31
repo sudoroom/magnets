@@ -1,4 +1,4 @@
-tall = 35; // how tall of a U
+tall = 30; // how tall of a U
 
 // primitive 2D U-shape
 module yoo(r) {
@@ -36,12 +36,12 @@ module bar(gap,thick) {
 // two U-shapes together
 module du(thick, gap) {
 	for (i=[0,1]) {
-		bar(gap=(gap + thick*i), thick=thick);
+		bar(gap=(gap + thick*i*0.9), thick=thick);
 	}
 }
 
 difference() {
-	translate([10,-25,0]) du(thick=9, gap=1);
+	translate([10,-25,0]) du(thick=11, gap=1.25);
 
 	// magnet hole
 	translate([0,0,0.3])  cylinder(1.75,6.5,6.5);
