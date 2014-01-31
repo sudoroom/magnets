@@ -41,7 +41,7 @@ module du(thick, gap) {
 }
 
 difference() {
-	translate([10,-25,0]) du(thick=11, gap=1.25);
+	translate([0,10,0]) du(thick=11, gap=1.25);
 
 	// magnet hole
 	translate([0,0,0.3])  cylinder(1.75,6.5,6.5);
