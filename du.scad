@@ -1,4 +1,4 @@
-tall = 40; // how tall of a U
+tall = 35; // how tall of a U
 
 // primitive 2D U-shape
 module yoo(r) {
