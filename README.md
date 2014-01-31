@@ -1,6 +1,6 @@
 # Sudo Magnets
 
-![Hack the Planet](https://github.com/sudoroom/magnets/blob/master/world/world.stl "Hack the Planet")
+![Hack the Planet](https://raw.github.com/sudoroom/magnets/master/world/world.stl "Hack the Planet")
 
 These are experiments in 3D-printing fridge magnets for our hackerspace!
 
