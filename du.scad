@@ -3,7 +3,7 @@ tall = 30; // how tall of a U
 // primitive 2D U-shape
 module yoo(r) {
 	union() {
-		circle(r=r,$fn=20);
+		circle(r=r,$fn=30);
 		translate([-r,0,0])
 			square([2*r,tall]);
 	}
@@ -12,7 +12,7 @@ module yoo(r) {
 // hemisphere to minkowski with
 module hemisphere(r) {
 	difference() {
-		sphere(r=r,$fn=12);
+		sphere(r=r,$fn=30);
 		translate([-r,-r,-2*r]) cube([2*r,2*r,2*r]);
 	}
 }
