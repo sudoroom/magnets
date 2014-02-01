@@ -1,6 +1,6 @@
 difference() {
 	translate([-136,-45,0])
-		scale([4,4,10])
+		scale([4,4,6])
 		minkowski() {
 			linear_extrude(height=0.1)
 				import("shrunk.dxf");
