@@ -1,10 +1,11 @@
 difference() {
-	scale([4,4])
-	translate([-34,-10,0]) minkowski() {
+	translate([-136,-45,0])
+		scale([4,4,10])
+		minkowski() {
 		linear_extrude(height=0.1)
 			import("shrunk.dxf");
 		difference() {
-			sphere(r=1.5,$fn=13);
+			sphere(r=0.9,$fn=13);
 			translate([-3,-3,-6]) cube([6,6,6]);
 		}
 	}
