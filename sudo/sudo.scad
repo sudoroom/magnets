@@ -5,7 +5,7 @@ difference() {
 			linear_extrude(height=0.1)
 				import("shrunk.dxf");
 			difference() {
-				sphere(r=0.9,$fn=13);
+				sphere(r=0.9,$fn=30);
 				translate([-3,-3,-6]) cube([6,6,6]);
 			}
 		}
