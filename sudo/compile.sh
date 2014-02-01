@@ -16,7 +16,7 @@ openscad -o ${name}.stl ${name}.scad
 slic3r \
 	 --layer-height 0.25 \
 	 --perimeters 1 \
-	 --solid-layers 5 \
+	 --solid-layers 4 \
 	 --nozzle-diameter 0.35 \
 	 --filament-diameter 1.75 \
 	 --temperature 220 \
