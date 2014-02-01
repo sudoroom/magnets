@@ -13,6 +13,17 @@ module ground() {
 	}
 }
 
+module lens() {
+	difference() {
+		cylinder(7.5,10,10);
+		cylinder(8.5,9,9);
+	}
+	scale([1,1,0.75]) sphere(r=10,$fn=13);
+}
+
 ground() scale([1,1,0.15])
 	rotate(a=35.265,v=[1,1,0])
-	cube([30,30,30]);
+	union() {
+		cube([30,30,40]);
+		translate([3,15,15]) rotate([0,-90,0]) lens();
+	}
