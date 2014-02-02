@@ -1,4 +1,4 @@
-cl = 30; // camera length
+cl = 50; // camera length
 cw = 30; // camera width
 
 inf = camera_length * 4;   // "infinity"
