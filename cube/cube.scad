@@ -1,4 +1,7 @@
-inf = 100;   // "infinity"
+camera_length = 30;
+camera_width = 30;
+
+inf = camera_length * 4;   // "infinity"
 zer = 0.001; // "zero"
 
 module ground() {
@@ -21,9 +24,14 @@ module lens() {
 	scale([1,1,0.75]) sphere(r=10,$fn=13);
 }
 
+module corner_tilt(x,y) {
+	rotate(a=atan(x/sqrt(pow(x,2)+pow(y,2))),v=[x,y,0])
+		child();
+}
+
 ground() scale([1,1,0.15])
-	rotate(a=35.265,v=[1,1,0])
+	corner_tilt(x=camera_length,y=camera_width)
 	union() {
-		cube([30,30,40]);
+		cube([camera_length,camera_width,30]);
 		translate([3,15,15]) rotate([0,-90,0]) lens();
 	}
