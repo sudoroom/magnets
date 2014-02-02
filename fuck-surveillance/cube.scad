@@ -1,6 +1,6 @@
 cl = 50; // camera length
 cw = 30; // camera width
-wd = 2;  // word depth
+wd = 5;  // word depth
 
 inf = cl * 4;   // "infinity"
 zer = 0.001; // "zero"
@@ -34,20 +34,17 @@ ground() scale([1,1,0.15])
 	corner_tilt(x=cl,y=cw)
 	union() {
 		cube([cl,cw,cw]);
-
-		// lens
 		translate([3,15,15]) rotate([0,-90,0]) lens();
+	}
 
 		// fuck
-		translate([-15,cw-1,60])
-			rotate([-90,0,0])
-			scale([1,2,1])
+		translate([-5,-20])
 			linear_extrude(wd + 1)
+			scale([0.93,1.5])
 			import("fuck.dxf");
 
 		// surveillance
-		translate([5,-2,cw-1])
-			scale([0.5,1,1])
+		translate([15,-8])
 			linear_extrude(wd + 1)
+			scale([0.35,1])
 			import("surveillance.dxf");
-	}
