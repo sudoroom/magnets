@@ -30,12 +30,19 @@ module corner_tilt(x,y) {
 		child();
 }
 
-ground() scale([1,1,0.15])
-	corner_tilt(x=cl,y=cw)
-	union() {
-		cube([cl,cw,cw]);
-		translate([3,15,15]) rotate([0,-90,0]) lens();
-	}
+difference() {
+	translate([-20,-8,0]) union() {
+
+		// camera
+		ground()
+			scale([1,1,0.15])
+			corner_tilt(x=cl,y=cw)
+			union() {
+				cube([cl,cw,cw]);
+				translate([3,15,15])
+					rotate([0,-90,0])
+					lens();
+			}
 
 		// fuck
 		translate([-5,-20])
@@ -48,3 +55,9 @@ ground() scale([1,1,0.15])
 			linear_extrude(wd + 1)
 			scale([0.35,1])
 			import("surveillance.dxf");
+	}
+
+	// magnet holes
+	translate([0,0,0.3])  cylinder(1.75,6.5,6.5);
+	translate([0,0,-0.1]) cylinder(1.75,0.5,0.5);
+}
