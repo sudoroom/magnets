@@ -2,7 +2,7 @@ cl = 50; // camera length
 cw = 30; // camera width
 wd = 2;  // word depth
 
-inf = camera_length * 4;   // "infinity"
+inf = cl * 4;   // "infinity"
 zer = 0.001; // "zero"
 
 module ground() {
