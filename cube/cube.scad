@@ -1,5 +1,5 @@
-camera_length = 30;
-camera_width = 30;
+cl = 30; // camera length
+cw = 30; // camera width
 
 inf = camera_length * 4;   // "infinity"
 zer = 0.001; // "zero"
@@ -30,8 +30,8 @@ module corner_tilt(x,y) {
 }
 
 ground() scale([1,1,0.15])
-	corner_tilt(x=camera_length,y=camera_width)
+	corner_tilt(x=cl,y=cw)
 	union() {
-		cube([camera_length,camera_width,30]);
+		cube([cl,cw,cw]);
 		translate([3,15,15]) rotate([0,-90,0]) lens();
 	}
