@@ -1,5 +1,5 @@
 cl = 50; // camera length
-cw = 30; // camera width
+cw = 25; // camera width
 wd = 8;  // word depth
 
 inf = cl * 4;   // "infinity"
@@ -33,7 +33,7 @@ module corner_tilt(x,y) {
 }
 
 difference() {
-	translate([-20,-8,0]) union() {
+	translate([-17,-7,0]) union() {
 
 		// camera
 		ground()
@@ -41,19 +41,19 @@ difference() {
 			corner_tilt(x=cl,y=cw)
 			union() {
 				cube([cl,cw,cw]);
-				translate([3,15,15])
+				translate([3,cw/2,cw/2])
 					rotate([0,-90,0])
 					lens();
 			}
 
 		// fuck
-		translate([-5,-20])
+		translate([-8,-23])
 			linear_extrude(wd)
 			scale([0.93,1.5])
 			import("fuck.dxf");
 
 		// surveillance
-		translate([15,-8])
+		translate([12,-11])
 			linear_extrude(wd)
 			scale([0.35,1])
 			import("surveillance.dxf");
