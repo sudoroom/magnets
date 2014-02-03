@@ -16,13 +16,13 @@ openscad -o ${name}.stl ${name}.scad
 slic3r \
 	 --layer-height 0.25 \
 	 --perimeters 1 \
-	 --solid-layers 3 \
+	 --solid-layers 2 \
 	 --nozzle-diameter 0.35 \
 	 --filament-diameter 1.75 \
 	 --temperature 220 \
 	 --print-center 80,40 \
 	 --skirts 2 \
-	 --fill-density 0.14 \
+	 --fill-density 0.135 \
 	 -o ${tmpfile} ${name}.stl
 
 sed -i 's/M104 S200/M104 S220/' ${tmpfile}
