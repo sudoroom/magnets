@@ -1,4 +1,4 @@
-cl = 50; // camera length
+cl = 45; // camera length
 cw = 25; // camera width
 wd = 8;  // word depth
 
@@ -33,7 +33,7 @@ module corner_tilt(x,y) {
 }
 
 difference() {
-	translate([-17,-7,0]) union() {
+	translate([-25,-7,0]) union() {
 
 		// camera
 		ground()
@@ -49,13 +49,13 @@ difference() {
 		// fuck
 		translate([-8,-23])
 			linear_extrude(wd)
-			scale([0.93,1.5])
+			scale([0.885,1.5])
 			import("fuck.dxf");
 
 		// surveillance
 		translate([12,-11])
 			linear_extrude(wd)
-			scale([0.35,1])
+			scale([0.32,1])
 			import("surveillance.dxf");
 	}
 
