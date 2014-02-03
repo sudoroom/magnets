@@ -37,7 +37,7 @@ difference() {
 
 		// camera
 		ground()
-			scale([1,1,0.2])
+			scale([1,1,0.24])
 			corner_tilt(x=cl,y=cw)
 			union() {
 				cube([cl,cw,cw]);
