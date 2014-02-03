@@ -22,7 +22,9 @@ module lens() {
 		cylinder(7.5,10,10);
 		cylinder(8.5,9,9);
 	}
-	scale([1,1,0.75]) sphere(r=10,$fn=13);
+	scale([1,1,0.75])
+		rotate([-45,45,0])
+		sphere(r=10,$fn=40);
 }
 
 module corner_tilt(x,y) {
