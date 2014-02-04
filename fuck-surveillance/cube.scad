@@ -46,6 +46,10 @@ difference() {
 					lens();
 			}
 
+		intersection() {
+			translate([25,7,0]) scale([1,1,0.1663]) sphere(r=50,$fn=100);
+			union() {
+
 		// fuck
 		translate([-8,-23])
 			linear_extrude(wd)
@@ -57,6 +61,9 @@ difference() {
 			linear_extrude(wd)
 			scale([0.32,1])
 			import("surveillance.dxf");
+
+			}
+		}
 	}
 
 	// magnet holes
