@@ -28,15 +28,15 @@ module shard(a = 0,s = 1) {
 module shards() {
 	translate([-cw,-cw/2,-cw/2])
 		cube([cw+cd+0.01,cw*2,cw*2]);
-	shard(0,1);
-	shard(90,1.3);
-	shard(30,0.8);
-	shard(110,0.3);
-	shard(-40,0.1);
+	shard(270,1);
+	shard(0,1.3);
+	shard(300,0.8);
+	shard(20,0.3);
+	shard(230,0.1);
 }
 module crack() {
 	translate([cd,0,0])
-		rotate(a=ca,v=[0,1,0])
+		rotate(a=-ca,v=[0,0,1])
 		translate([-cd,0,0])
 		difference() {
 			child();
