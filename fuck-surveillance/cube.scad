@@ -58,6 +58,16 @@ module lens() {
 		sphere(r=10,$fn=40);
 }
 
+module bat(s = 6) {
+	hull() {
+		sphere(r=s*1.6,$fn=30);
+		translate([s*15,0,0]) sphere(r=s/2,$fn=30);
+	}
+	translate([s*15,0,0])
+		scale([s*0.14,1,1])
+		sphere(r=s,$fn=30);
+}
+
 module corner_tilt(x,y) {
 	rotate(a=atan(x/sqrt(pow(x,2)+pow(y,2))),v=[x,y,0])
 		child();
@@ -76,6 +86,10 @@ difference() {
 					rotate([0,-90,0])
 					lens();
 			}
+
+		translate([0,0,0])
+			rotate([0,0,0])
+			bat(4);
 
 /*		intersection() {
 			translate([25,7,0]) scale([1,1,0.1663]) sphere(r=50,$fn=100);
