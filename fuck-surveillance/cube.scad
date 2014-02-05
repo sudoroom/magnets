@@ -1,6 +1,7 @@
 cl = 45; // camera length
 cw = 25; // camera width
 wd = 8;  // word depth
+ca = 5;  // crack angle
 
 inf = cl * 4;   // "infinity"
 zer = 0.001; // "zero"
@@ -14,6 +15,33 @@ module ground() {
 		}
 		translate([-inf/2,-inf/2,-2*inf])
 			cube([inf,inf,2*inf]);
+	}
+}
+
+module shard(a = 0,s = 1) {
+	translate([45,12,cw/2])
+		rotate([a,0,0])
+		scale([1,s*5,1])
+		rotate([0,0,60])
+		cylinder(cw*3,cw,cw,$fn=3,center=true);
+}
+module shards() {
+	shard(0,1);
+	shard(90,1.3);
+	shard(30,0.8);
+	shard(110,0.3);
+	shard(-40,0.1);
+}
+module crack() {
+	translate([0,0,-2])
+		rotate(a=-ca,v=[0,1,0])
+		difference() {
+			child();
+			shards();
+		}
+	intersection() {
+		child();
+		shards();
 	}
 }
 
@@ -39,7 +67,7 @@ difference() {
 		ground()
 			scale([1,1,0.24])
 			corner_tilt(x=cl,y=cw)
-			union() {
+			crack() union() {
 				cube([cl,cw,cw]);
 				translate([3,cw/2,cw/2])
 					rotate([0,-90,0])
