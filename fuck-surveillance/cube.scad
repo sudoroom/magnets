@@ -4,7 +4,7 @@ wd = 8;  // word depth
 ca = 10;  // crack angle
 cd = 20; // crack depth
 
-inf = cl * 4;   // "infinity"
+inf = cl * 10;   // "infinity"
 zer = 0.001; // "zero"
 
 module ground() {
