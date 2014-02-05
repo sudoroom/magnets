@@ -98,20 +98,20 @@ difference() {
 			}
 
 		intersection() {
-			translate([34,11,0]) scale([1,0.8,0.1665]) sphere(r=50,$fn=200);
+			translate([34,11,0]) scale([1.4,0.8,0.1665]) sphere(r=50,$fn=200);
 			union() {
 
 		// fuck
-		translate([33,-6])
+		translate([31,-4])
 			linear_extrude(wd)
-			scale([1.2,1.1])
-			import("no.dxf");
+			scale([0.9,1])
+			import("fuck.dxf");
 
 		// surveillance
-		translate([28.5,-15])
+		translate([29.8,-13.2])
 			linear_extrude(wd)
 			scale([0.32,0.7])
-			import("pictures.dxf");
+			import("surveillance.dxf");
 
 			}
 		}
