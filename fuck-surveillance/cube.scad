@@ -104,13 +104,13 @@ difference() {
 		// fuck
 		translate([38,-5])
 			linear_extrude(wd)
-			scale([1.1,1.1])
+			scale([1.2,1.1])
 			import("no.dxf");
 
 		// surveillance
 		translate([37,-14])
 			linear_extrude(wd)
-			scale([0.31,0.7])
+			scale([0.295,0.7])
 			import("pictures.dxf");
 
 			}

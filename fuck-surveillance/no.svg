@@ -14,7 +14,7 @@
    id="svg3018"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="New document 2">
+   sodipodi:docname="no.svg">
   <defs
      id="defs3020" />
   <sodipodi:namedview
@@ -43,7 +43,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -53,14 +53,14 @@
      id="layer1">
     <text
        xml:space="preserve"
-       style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:-6px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial Black;-inkscape-font-specification:'Arial Black,'"
-       x="51.667969"
+       style="font-size:72px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:-6px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold"
+       x="45.65625"
        y="1051.4833"
        id="text3026"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3028"
-         x="48.667969"
+         x="42.65625"
          y="1051.4833">NO</tspan></text>
   </g>
 </svg>
