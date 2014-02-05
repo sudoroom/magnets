@@ -97,24 +97,24 @@ difference() {
 					bat(4);
 			}
 
-/*		intersection() {
-			translate([25,7,0]) scale([1,1,0.1663]) sphere(r=50,$fn=100);
+		intersection() {
+//			translate([25,7,0]) scale([1,1,0.1663]) sphere(r=50,$fn=100);
 			union() {
 
 		// fuck
-		translate([-8,-23])
+		translate([38,-5])
 			linear_extrude(wd)
-			scale([0.885,1.5])
-			import("fuck.dxf");
+			scale([1.1,1.1])
+			import("no.dxf");
 
 		// surveillance
-		translate([12,-11])
+		translate([37,-14])
 			linear_extrude(wd)
-			scale([0.32,1])
-			import("surveillance.dxf");
+			scale([0.31,0.7])
+			import("pictures.dxf");
 
 			}
-		}*/
+		}
 	}
 
 	// magnet holes
