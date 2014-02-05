@@ -78,18 +78,24 @@ difference() {
 
 		// camera
 		ground()
-			scale([1,1,0.24])
-			corner_tilt(x=cl,y=cw)
-			crack() union() {
-				cube([cl,cw,cw]);
-				translate([3,cw/2,cw/2])
-					rotate([0,-90,0])
-					lens();
-			}
+			scale([1,1,0.24]) {
 
-		translate([40,18,18])
-			rotate([0,20,18])
-			bat(4);
+				// camera
+				corner_tilt(x=cl,y=cw)
+					crack()
+					union() {
+						cube([cl,cw,cw]);
+						translate([3,cw/2,cw/2])
+							rotate([0,-90,0])
+							lens();
+					}
+
+				// bat
+				translate([40,18,10])
+					scale([1,1,3])
+					rotate([0,3,18])
+					bat(4);
+			}
 
 /*		intersection() {
 			translate([25,7,0]) scale([1,1,0.1663]) sphere(r=50,$fn=100);
