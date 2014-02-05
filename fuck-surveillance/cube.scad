@@ -2,7 +2,7 @@ cl = 45; // camera length
 cw = 25; // camera width
 wd = 8;  // word depth
 ca = 10;  // crack angle
-cd = 20; // crack depth
+cd = 12; // crack depth
 
 inf = cl * 10;   // "infinity"
 zer = 0.001; // "zero"
@@ -74,7 +74,7 @@ module corner_tilt(x,y) {
 }
 
 difference() {
-	translate([-22,-7,0]) union() {
+	translate([-32,-7,0]) union() {
 
 		// camera
 		ground()
@@ -91,26 +91,26 @@ difference() {
 					}
 
 				// bat
-				translate([40,18,10])
+				translate([32,18,10])
 					scale([1,1,3])
-					rotate([0,3,18])
+					rotate([0,3,12.2])
 					bat(4);
 			}
 
 		intersection() {
-//			translate([25,7,0]) scale([1,1,0.1663]) sphere(r=50,$fn=100);
+			translate([34,11,0]) scale([1,0.8,0.1665]) sphere(r=50,$fn=200);
 			union() {
 
 		// fuck
-		translate([38,-5])
+		translate([33,-6])
 			linear_extrude(wd)
 			scale([1.2,1.1])
 			import("no.dxf");
 
 		// surveillance
-		translate([37,-14])
+		translate([28.5,-15])
 			linear_extrude(wd)
-			scale([0.295,0.7])
+			scale([0.32,0.7])
 			import("pictures.dxf");
 
 			}
