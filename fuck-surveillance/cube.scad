@@ -64,7 +64,7 @@ module corner_tilt(x,y) {
 }
 
 difference() {
-	translate([-25,-7,0]) union() {
+	translate([-22,-7,0]) union() {
 
 		// camera
 		ground()
