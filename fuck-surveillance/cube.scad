@@ -77,7 +77,7 @@ difference() {
 					lens();
 			}
 
-		intersection() {
+/*		intersection() {
 			translate([25,7,0]) scale([1,1,0.1663]) sphere(r=50,$fn=100);
 			union() {
 
@@ -94,7 +94,7 @@ difference() {
 			import("surveillance.dxf");
 
 			}
-		}
+		}*/
 	}
 
 	// magnet holes
