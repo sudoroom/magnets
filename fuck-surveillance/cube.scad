@@ -1,7 +1,7 @@
 cl = 45; // camera length
 cw = 25; // camera width
 wd = 8;  // word depth
-ca = 5;  // crack angle
+ca = 10;  // crack angle
 cd = 20; // crack depth
 
 inf = cl * 4;   // "infinity"
@@ -87,8 +87,8 @@ difference() {
 					lens();
 			}
 
-		translate([0,0,0])
-			rotate([0,0,0])
+		translate([40,18,18])
+			rotate([0,20,18])
 			bat(4);
 
 /*		intersection() {
