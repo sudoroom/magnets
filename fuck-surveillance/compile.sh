@@ -14,7 +14,7 @@ tmpfile=/tmp/.magnet.$EUID.$$.$(date +%s).$RANDOM
 ionice -c 3 -p $$
 renice -n 19 $$
 
-openscad -o ${name}.stl ${name}.scad
+#openscad -o ${name}.stl ${name}.scad
 
 slic3r \
 	 --layer-height 0.25 \
@@ -23,7 +23,7 @@ slic3r \
 	 --nozzle-diameter 0.35 \
 	 --filament-diameter 1.75 \
 	 --temperature 220 \
-	 --print-center 120,80 \
+	 --print-center 120,160 \
 	 --skirts 2 \
 	 --fill-density 0.135 \
 	 -o ${tmpfile} ${name}.stl
