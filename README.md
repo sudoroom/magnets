@@ -1,6 +1,13 @@
 # Sudo Magnets
 
-These are experiments in 3D-printing fridge magnets for our hackerspace. [Check it out](https://github.com/sudoroom/magnets/blob/master/hack-the-planet/world.stl "'Hack The Planet' magnet!")!
+These are experiments in 3D-printing fridge magnets for our hackerspace. Check it out:
+
+* [Hack The Planet](https://github.com/sudoroom/magnets/blob/master/hack-the-planet/world.stl "'Hack The Planet' magnet")
+* [Mesh The Planet](https://github.com/sudoroom/magnets/blob/master/hack-the-planet/mesh.stl "'Mesh The Planet' magnet")
+* [Sudo](https://github.com/sudoroom/magnets/blob/master/sudo/sudo.stl "'Sudo' magnet")
+* [Heart](https://github.com/sudoroom/magnets/blob/master/heart/heart.stl "heart magnet")
+* [Double Union](https://github.com/sudoroom/magnets/blob/master/double-union/du.stl "'Double Union' magnet")
+* [Anti-Surveillance](https://github.com/sudoroom/magnets/blob/master/fuck-surveillance/cube.stl "'Fuck Surveillance' magnet")
 
 ## Why?
 
