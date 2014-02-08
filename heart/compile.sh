@@ -19,20 +19,20 @@ openscad -o ${name}.stl ${name}.scad
 slic3r \
 	 --layer-height 0.25 \
 	 --perimeters 1 \
-	 --top-solid-layers 5 \
+	 --top-solid-layers 4 \
 	 --bottom-solid-layers 3 \
 	 --nozzle-diameter 0.35 \
 	 --filament-diameter 1.75 \
 	 --temperature 220 \
-	 --print-center 70,50 \
-	 --skirts 2 \
+	 --print-center 120,160 \
+	 --skirts 3 \
 	 --fill-density 0.15 \
 	 -o ${tmpfile} ${name}.stl
 
 sed -i 's/M104 S200/M104 S220/' ${tmpfile}
 sed -i 's/M109 S200/M109 S220/' ${tmpfile}
 
-awk '/^G1 Z2.35/ {print "G1 Z6.000\nG4 P10000"}
+awk '/^G1 Z2.35/ {print "G1 Z60.000\nG4 P12000"}
 	{print}' ${tmpfile} >| ${name}.gcode
 
 rm -f ${tmpfile}
