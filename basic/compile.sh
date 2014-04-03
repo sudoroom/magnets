@@ -21,6 +21,5 @@ slic3r \
 	 --bed-temperature 85 \
 	 --print-center 149,138 \
 	 --perimeters 2 \
-	 --fill-density 0.17 \
 	 --skirts 2 \
 	 -o ${name}.gcode ${name}.stl
