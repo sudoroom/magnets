@@ -16,10 +16,7 @@ renice -n 19 $$
 openscad -o ${name}.stl ${name}.scad
 
 slic3r \
-	 --load ../fast_ABS_no-support_pt35nzl_pt27layer-11s.ini \
-	 --temperature 230 \
-	 --bed-temperature 85 \
-	 --print-center 149,138 \
+	 --load ../conf/fine_ABS_no-support_pt35nzl_pt14layer-6s.ini \
 	 --perimeters 2 \
-	 --skirts 2 \
+	 --skirts 4 \
 	 -o ${name}.gcode ${name}.stl
