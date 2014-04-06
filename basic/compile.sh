@@ -9,6 +9,7 @@ self=$(dirname "${self}") || exit 1
 cd "$self"
 
 name=sphere
+tmpfile=/tmp/.magnet.$EUID.$$.$(date +%s).$RANDOM
 
 ionice -c 3 -p $$
 renice -n 19 $$
@@ -19,4 +20,9 @@ slic3r \
 	 --load ../conf/fine_ABS_no-support_pt35nzl_pt14layer-6s.ini \
 	 --perimeters 2 \
 	 --skirts 4 \
-	 -o ${name}.gcode ${name}.stl
+	 -o ${tmpfile} ${name}.stl
+
+awk '/^G1 Z2.128/ {print "G1 Z60.000\nG4 P12000"}
+	{print}' ${tmpfile} >| ${name}.gcode
+
+rm -f ${tmpfile}
