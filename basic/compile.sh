@@ -22,7 +22,7 @@ slic3r \
 	 --skirts 4 \
 	 -o ${tmpfile} ${name}.stl
 
-awk '/^G1 Z2.128/ {print "G1 Z60.000\nG4 P12000"}
+awk '/^G1 Z2.408/ {print "G1 Z60.000\nG4 P12000"}
 	{print}' ${tmpfile} >| ${name}.gcode
 
 rm -f ${tmpfile}
