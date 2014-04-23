@@ -3,20 +3,20 @@ module arrow(l = 10, t = 2.5) {
 }
 
 module arm(f = false,m = false) {
-	translate([-2.5,21]) square([5,30]);
+	translate([-1,11]) square([2,18]);
 	if (f) {
-		translate ([-10,33]) square([20,5]);
+		translate ([-8,16.5]) square([16,2]);
 	}
 	if (m) {
 		translate([0,30])
-			arrow(10,2.5);
+			arrow(8,1.4);
 	}
 }
 
 linear_extrude(height=10) {
 	difference() {
-		circle(r=25,$fn=100);
-		circle(r=20,$fn=100);
+		circle(r=12,$fn=100);
+		circle(r=10,$fn=100);
 	}
 	arm(f = true, m = true);
 	rotate(a=120, v=[0,0,1]) arm(m = true);
