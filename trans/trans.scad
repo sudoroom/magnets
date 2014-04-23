@@ -29,3 +29,11 @@ difference() {
 		translate([-50,-50,6])
 		cube([100,100,6]);
 }
+
+difference() {
+	linear_extrude(height=10)
+		circle(r=10.5,$fn=3);
+	rotate(a=4, v=[1,0,0])
+		translate([-50,-50,6])
+		cube([100,100,6]);
+}
