@@ -34,7 +34,7 @@ difference() {
 	linear_extrude(height=10)
 		rotate(a=30, v=[0,0,1])
 		circle(r=10.5,$fn=3);
-	rotate(a=4, v=[1,0,0])
-		translate([-50,-50,6])
+	rotate(a=-4, v=[1,4,0])
+		translate([-50,-50,5.25])
 		cube([100,100,6]);
 }
