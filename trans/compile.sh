@@ -8,7 +8,7 @@ self=$(readlink -e "$0") || exit 1
 self=$(dirname "${self}") || exit 1
 cd "$self"
 
-name=sudo
+name=trans
 tmpfile=/tmp/.magnet.$EUID.$$.$(date +%s).$RANDOM
 
 ionice -c 3 -p $$
@@ -18,14 +18,14 @@ openscad -o ${name}.stl ${name}.scad
 
 slic3r \
 	 --layer-height 0.25 \
-	 --perimeters 1 \
+	 --perimeters 3 \
 	 --solid-layers 4 \
 	 --nozzle-diameter 0.35 \
 	 --filament-diameter 1.75 \
 	 --temperature 220 \
 	 --print-center 150,100 \
-	 --skirts 2 \
-	 --fill-density 0.14 \
+	 --skirts 4 \
+	 --fill-density 0.15 \
 	 -o ${tmpfile} ${name}.stl
 
 sed -i 's/M104 S200/M104 S220/' ${tmpfile}
