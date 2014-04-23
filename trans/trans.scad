@@ -3,14 +3,14 @@ module arrow(l = 10, t = 2.5) {
 }
 
 module arm(f = false,m = false) {
-	translate([-1,11])
+	translate([-1,14])
 		square([2,18]);
 	if (f) {
-		translate ([-8,16.5])
+		translate ([-8,19.5])
 			square([16,2]);
 	}
 	if (m) {
-		translate([0,30])
+		translate([0,33])
 			arrow(8,1.4);
 	}
 }
@@ -18,8 +18,8 @@ module arm(f = false,m = false) {
 difference() {
 	linear_extrude(height=10) {
 		difference() {
-			circle(r=12,$fn=100);
-			circle(r=10,$fn=100);
+			circle(r=15,$fn=100);
+			circle(r=13,$fn=100);
 		}
 		arm(f = true, m = true);
 		rotate(a=120, v=[0,0,1]) arm(m = true);
@@ -33,7 +33,7 @@ difference() {
 difference() {
 	linear_extrude(height=10)
 		rotate(a=30, v=[0,0,1])
-		circle(r=10.5,$fn=3);
+		circle(r=13.5,$fn=3);
 	rotate(a=-4, v=[1,4,0])
 		translate([-50,-50,5.25])
 		cube([100,100,6]);
