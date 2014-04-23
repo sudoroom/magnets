@@ -13,6 +13,7 @@ module arm(f = false,m = false) {
 	}
 }
 
+difference() {
 linear_extrude(height=10) {
 	difference() {
 		circle(r=12,$fn=100);
@@ -21,4 +22,8 @@ linear_extrude(height=10) {
 	arm(f = true, m = true);
 	rotate(a=120, v=[0,0,1]) arm(m = true);
 	rotate(a=240, v=[0,0,1]) arm(f = true);
+}
+	rotate(a=4, v=[1,0,0])
+		translate([-50,-50,6])
+		cube([100,100,6]);
 }
