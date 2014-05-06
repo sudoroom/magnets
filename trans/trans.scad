@@ -19,7 +19,7 @@ difference() {
 	linear_extrude(height=10) {
 		difference() {
 			circle(r=15,$fn=100);
-			circle(r=13,$fn=100);
+			circle(r=12.5,$fn=100);
 		}
 		arm(f = true, m = true);
 		rotate(a=120, v=[0,0,1]) arm(m = true);
@@ -35,7 +35,7 @@ difference() {
 		rotate(a=30, v=[0,0,1])
 		circle(r=13.5,$fn=3);
 	rotate(a=-4, v=[1,4,0])
-		translate([-50,-50,5.25])
+		translate([-50,-50,4.75])
 		cube([100,100,6]);
 	translate([0,0,0.3])     cylinder(1.75,6.5,6.5);
 	translate([0,0,-0.1])    cylinder(1.75,0.5,0.5);
