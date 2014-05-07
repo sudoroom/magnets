@@ -39,7 +39,7 @@ difference() {
 		circle(r=14.25,$fn=3);
 	rotate(a=-4, v=[1,4,0])
 		translate([-50,-50,4.75])
-		cube([100,100,6]);
+		cube([100,100,100]);
 	translate([0,0,0.3])     cylinder(1.75,6.5,6.5);
 	translate([0,0,-0.1])    cylinder(1.75,0.5,0.5);
 }
