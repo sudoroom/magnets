@@ -1,3 +1,8 @@
+module smoother(w=1.5) {
+	cylinder(4,w,w,$fn=8);
+	translate([0,0,3.999]) cylinder(2,w,w/2.5,$fn=8);
+}
+
 module arrow(l = 10, t = 2.5) {
 	polygon(points=[[0,0],[l,-l],[l-t,-l-t],[0,-2*t],[-l+t,-l-t],[-l,-l]],paths=[[0,1,2,3,4,5,6]]);
 }
@@ -15,8 +20,8 @@ module arm(f = false,m = false) {
 	}
 }
 
-difference() {
-	linear_extrude(height=10) {
+minkowski() {
+	linear_extrude(height=0.1) {
 		difference() {
 			circle(r=15,$fn=100);
 			circle(r=12.5,$fn=100);
@@ -25,9 +30,7 @@ difference() {
 		rotate(a=120, v=[0,0,1]) arm(m = true);
 		rotate(a=240, v=[0,0,1]) arm(f = true);
 	}
-	rotate(a=4, v=[1,0,0])
-		translate([-50,-50,6])
-		cube([100,100,6]);
+	smoother(w=1);
 }
 
 difference() {
