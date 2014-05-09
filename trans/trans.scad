@@ -36,7 +36,7 @@ minkowski() {
 difference() {
 	linear_extrude(height=10)
 		rotate(a=30, v=[0,0,1])
-		circle(r=14.25,$fn=3);
+		circle(r=14.5,$fn=3);
 	rotate(a=-4, v=[1,4,0])
 		translate([-50,-50,4.75])
 		cube([100,100,100]);
