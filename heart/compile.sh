@@ -26,7 +26,7 @@ slic3r \
 	 --temperature 220 \
 	 --print-center 170,90 \
 	 --skirts 3 \
-	 --fill-density 0.15 \
+	 --fill-density 15% \
 	 -o ${tmpfile} ${name}.stl
 
 sed -i 's/M104 S200/M104 S220/' ${tmpfile}
