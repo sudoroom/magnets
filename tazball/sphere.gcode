@@ -10,8 +10,6 @@ M107
 G28 ; home all axes
 M104 S230 ; lower temp after/durring first layer improve overhangs
 M140 S90 ; lower temp after/durring first layer improve overhangs
-M109 S230
-M190 S90
 G90 ; use absolute coordinates
 G92 E0
 M82 ; use absolute distances for extrusion
