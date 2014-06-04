@@ -14,7 +14,7 @@ module stps() {
 			scale([0.27,0.55,1])
 			linear_extrude(0.01)
 			import("smash.dxf");
-		sphere(r=1);
+		scale([1,1,1.5]) sphere(r=1,$fn=10);
 	}
 }
 
