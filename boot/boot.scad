@@ -8,6 +8,16 @@ module button() {
 	scale([1,0.7,1]) sphere(r=3,$fn=40);
 }
 
+module stps() {
+	minkowski() {
+		translate([-20,-65,0])
+			scale([0.27,0.55,1])
+			linear_extrude(0.01)
+			import("smash.dxf");
+		sphere(r=1);
+	}
+}
+
 module boot() {
 	// foot
 	hull() {
