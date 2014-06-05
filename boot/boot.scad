@@ -1,3 +1,18 @@
+inf = cl * 10;   // "infinity"
+zer = 0.001; // "zero"
+
+module ground() {
+	difference() {
+		minkowski() {
+			translate([0,0,(zer-inf)])
+				cylinder(inf,zer,zer,$fn=3);
+			child();
+		}
+		translate([-inf/2,-inf/2,-2*inf])
+			cube([inf,inf,2*inf]);
+	}
+}
+
 module ankle() {
 	translate([0,-45,-30])
 		linear_extrude(1)
@@ -37,6 +52,9 @@ module boot() {
 		ankle();
 	}
 
+	// text
+	stps();
+
 	// leg
 	difference() {
 		hull() {
@@ -56,4 +74,7 @@ module boot() {
 	translate([0,-14,-70]) button();
 }
 
-rotate([20,-35,20]) boot();
+ground()
+	scale([1,1,0.24])
+	rotate([20,-35,20])
+	boot();
