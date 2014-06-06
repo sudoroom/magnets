@@ -1,4 +1,5 @@
-inf = cl * 10;   // "infinity"
+bl = 200; // boot length
+inf = bl * 10;   // "infinity"
 zer = 0.001; // "zero"
 
 module ground() {
