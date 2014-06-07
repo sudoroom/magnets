@@ -81,8 +81,15 @@ module boot() {
 	translate([0,-14,-70]) button();
 }
 
-	ground()
-		translate([0,0,15.5])
-		scale([1,1,0.18])
+difference() {
+	scale([0.5,0.5,0.18])
+		translate([-10,23,0])
+		ground()
+		translate([0,0,85])
 		rotate([20,-35,0])
 		boot();
+
+	// magnet holes
+	translate([0,0,0.3])  cylinder(1.75,6.5,6.5);
+	translate([0,0,-0.1]) cylinder(1.75,0.5,0.5);
+}
