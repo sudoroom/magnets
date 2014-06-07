@@ -36,6 +36,7 @@ module stps() {
 
 module boot() {
 	// foot
+	difference() {
 	hull() {
 		union() {
 			difference() {
@@ -51,6 +52,11 @@ module boot() {
 				circle(r=20);
 		}
 		ankle();
+		}
+		translate([64.5,-10,0])
+			rotate([-60,0,0])
+			scale([0.8,0.8,3])
+			sphere(r=56,$fn=60);
 	}
 
 	// text
