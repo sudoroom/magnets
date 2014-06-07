@@ -27,31 +27,31 @@ module button() {
 module stps() {
 	translate([-18.5,-65,0])
 		scale([0.26,0.55,1])
-	minkowski() {
+		minkowski() {
 			linear_extrude(0.01)
-			import("smash.dxf");
+				import("smash.dxf");
 			scale([1,1,1.8]) sphere(r=1,$fn=10);
-	}
+		}
 }
 
 module boot() {
 	// foot
 	difference() {
-	hull() {
-		union() {
-			difference() {
-				scale([1.2,2,1.1])
-					sphere(r=20,$fn=50);
-				translate([-50,-50,0])
-					cube([100,100,100]);
+		hull() {
+			union() {
+				difference() {
+					scale([1.2,2,1.1])
+						sphere(r=20,$fn=50);
+					translate([-50,-50,0])
+						cube([100,100,100]);
+				}
+				translate([0,0,-1])
+					linear_extrude(1)
+					translate([0,-35])
+					scale([1.1,2.3])
+					circle(r=20);
 			}
-			translate([0,0,-1])
-				linear_extrude(1)
-				translate([0,-35])
-				scale([1.1,2.3])
-				circle(r=20);
-		}
-		ankle();
+			ankle();
 		}
 		translate([64.5,-10,0])
 			rotate([-60,0,0])
@@ -81,8 +81,8 @@ module boot() {
 	translate([0,-14,-70]) button();
 }
 
-ground()
-	translate([0,0,15.5])
-	scale([1,1,0.18])
-	rotate([20,-35,0])
-	boot();
+	ground()
+		translate([0,0,15.5])
+		scale([1,1,0.18])
+		rotate([20,-35,0])
+		boot();
