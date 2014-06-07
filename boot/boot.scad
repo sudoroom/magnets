@@ -25,12 +25,12 @@ module button() {
 }
 
 module stps() {
+	translate([-18.5,-65,0])
+		scale([0.26,0.55,1])
 	minkowski() {
-		translate([-20,-65,0])
-			scale([0.27,0.55,1])
 			linear_extrude(0.01)
 			import("smash.dxf");
-		scale([1,1,1.5]) sphere(r=1,$fn=10);
+			scale([1,1,1.8]) sphere(r=1,$fn=10);
 	}
 }
 
@@ -76,6 +76,7 @@ module boot() {
 }
 
 ground()
-	scale([1,1,0.24])
-	rotate([20,-35,20])
+	translate([0,0,15.5])
+	scale([1,1,0.18])
+	rotate([20,-35,0])
 	boot();
