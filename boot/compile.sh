@@ -25,7 +25,7 @@ slic3r \
 sed -i 's/M104 S220/M104 S230/' ${tmpfile}
 sed -i 's/M140 S80/M140 S90/' ${tmpfile}
 
-awk '/^G1 Z2.408/ {print "G1 Y200 Z30.000\nG4 P12000"}
+awk '/^G1 Z2.128/ {print "G1 Y200 Z30.000\nG4 P12000"}
 	{print}' ${tmpfile} >| ${name}.gcode
 
 rm -f ${tmpfile}
