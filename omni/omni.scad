@@ -7,7 +7,7 @@ difference() {
 				linear_extrude(height=0.1)
 				import("omni.dxf");
 			difference() {
-				sphere(r=6,$fn=30);
+				scale([0.5,0.5,1]) sphere(r=6,$fn=14);
 				translate([-6,-6,-12]) cube([12,12,12]);
 			}
 		}
