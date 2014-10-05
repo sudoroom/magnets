@@ -17,5 +17,7 @@ difference() {
 	translate([0,0,-0.1]) cylinder(1.75,0.5,0.5);
 }
 
+translate([90,-10,0]) cube([8,20,1.5]);
+
 //#cylinder(10,6.75,6.75);
 //#cube([10,10,10]);
