@@ -1,7 +1,8 @@
 ratio=0.5;
+rt=0.7; // ratio two
 
 difference() {
-	translate([7,0,0])
+	scale([rt,rt,1]) translate([-35,23,0])
 		minkowski() {
 			translate([-50,-100,0])
 				scale([ratio,ratio,10])
@@ -17,7 +18,7 @@ difference() {
 	translate([0,0,-0.1]) cylinder(1.75,0.5,0.5);
 }
 
-translate([90,-10,0]) cube([8,20,1.5]);
+translate([33,10,0]) cube([7,15,1.5]);
 
-//#cylinder(10,6.75,6.75);
+#cylinder(10,6.75,6.75);
 //#cube([10,10,10]);
