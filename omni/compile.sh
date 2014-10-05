@@ -17,21 +17,14 @@ renice -n 19 $$
 openscad -o ${name}.stl ${name}.scad
 
 slic3r \
-	 --layer-height 0.25 \
-	 --perimeters 1 \
-	 --solid-layers 4 \
-	 --nozzle-diameter 0.35 \
-	 --filament-diameter 1.75 \
-	 --temperature 220 \
-	 --print-center 150,100 \
-	 --skirts 2 \
-	 --fill-density 14% \
+	 --load ../conf/fast_ABS_no-support_pt35nzl_pt27layer-11s.ini \
+	 --skirts 3 \
 	 -o ${tmpfile} ${name}.stl
 
-sed -i 's/M104 S200/M104 S220/' ${tmpfile}
-sed -i 's/M109 S200/M109 S220/' ${tmpfile}
+sed -i 's/M104 S220/M104 S230/' ${tmpfile}
+sed -i 's/M140 S80/M140 S90/' ${tmpfile}
 
-awk '/^G1 Z2.35/ {print "G1 Z60.000\nG4 P12000"}
+awk '/^G1 Z2.408/ {print "G1 Y200 Z30.000\nG4 P12000"}
 	{print}' ${tmpfile} >| ${name}.gcode
 
 rm -f ${tmpfile}
