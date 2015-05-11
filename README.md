@@ -9,7 +9,7 @@ These are experiments in 3D-printing fridge magnets for our hackerspace. Check i
 * [Double Union](https://github.com/sudoroom/magnets/blob/master/double-union/du.stl "'Double Union' magnet")
 * [Anti-Surveillance](https://github.com/sudoroom/magnets/blob/master/fuck-surveillance/cube.stl "'Fuck Surveillance' magnet")
 * [ABOLISH](https://github.com/sudoroom/magnets/blob/master/abolish/abolish.stl "'ABOLISH' magnet")
-* [trans](https://github.com/sudoroom/magnets/blob/master/trans/trans.stl "'trans symbol' magnet")
+* [Transgender Symbol](https://github.com/sudoroom/magnets/blob/master/trans/trans.stl "'trans symbol' magnet")
 
 ## Why?
 
