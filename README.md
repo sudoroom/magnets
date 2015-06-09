@@ -17,7 +17,7 @@ Fridge magnets are useful objects, great conversation pieces, and good advertisi
 
 ## How do you print magnets??
 
-The model has a hole for [one of these](http://www.amazon.com/gp/product/B0012ATDD2/ "Is there a non-Amazon link for this?"). The printer pauses while you insert it by hand. It also moves the bed, which hopefully will make a loud distinctive noise to alert you.
+The model has a hole for [one of these](http://www.amazon.com/gp/product/B00C786XTU/ "Is there a non-Amazon link for this?"). The printer pauses while you insert it by hand. It also moves the bed, which hopefully will make a loud distinctive noise to alert you.
 
 ## How do I make one?
 
